@@ -1,0 +1,3 @@
+UPDATE "Users"
+SET "Name" = 'LucasTalam'
+WHERE "Id" = 1;

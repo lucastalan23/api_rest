@@ -1,0 +1,5 @@
+DELETE
+        FROM
+        "Products"
+        WHERE
+        "Name" = 'Banana';
