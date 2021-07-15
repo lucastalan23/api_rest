@@ -65,8 +65,8 @@ namespace api_rest.Migrations
                     b.Property<short>("QuantityInPackage")
                         .HasColumnType("smallint");
 
-                    b.Property<byte>("UnitOfMeasurement")
-                        .HasColumnType("smallint");
+                    b.Property<string>("UnitOfMeasurement2")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -81,7 +81,7 @@ namespace api_rest.Migrations
                             CategoryId = 100,
                             Name = "Maça",
                             QuantityInPackage = (short)200,
-                            UnitOfMeasurement = (byte)4
+                            UnitOfMeasurement2 = "Kg"
                         },
                         new
                         {
@@ -89,7 +89,7 @@ namespace api_rest.Migrations
                             CategoryId = 100,
                             Name = "Banana",
                             QuantityInPackage = (short)500,
-                            UnitOfMeasurement = (byte)4
+                            UnitOfMeasurement2 = "Kg"
                         });
                 });
 

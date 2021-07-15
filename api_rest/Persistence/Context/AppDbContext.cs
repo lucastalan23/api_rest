@@ -36,11 +36,10 @@ namespace api_rest.Persistence.Context
             builder.Entity<Product>().HasKey(p => p.Id);
             builder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(30);
-            builder.Entity<Product>().Property(p => p.UnitOfMeasurement);
+            builder.Entity<Product>().Property(p => p.UnitOfMeasurement2).IsRequired();
             builder.Entity<Product>().Property(p => p.QuantityInPackage).IsRequired();
             builder.Entity<Product>().Property(p => p.CategoryId);
             
-
             builder.Entity<Product>().HasData(
                 new Product 
                 { 
@@ -48,7 +47,7 @@ namespace api_rest.Persistence.Context
                     Name = "Maça", 
                     CategoryId = 100, 
                     QuantityInPackage = 200,
-                    UnitOfMeasurement = EUnitOfMeasurement.Kilogram
+                    UnitOfMeasurement2 = "Kg"
                 },
                 new Product 
                 { 
@@ -56,7 +55,8 @@ namespace api_rest.Persistence.Context
                     Name = "Banana", 
                     CategoryId = 100, 
                     QuantityInPackage = 500,
-                    UnitOfMeasurement = EUnitOfMeasurement.Kilogram
+                    UnitOfMeasurement2 = "Kg"
+
                 }
                 
                 

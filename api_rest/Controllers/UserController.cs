@@ -1,66 +1,65 @@
 ﻿using api_rest.Domain.Models;
+using api_rest.Resources;
 using api_rest.Domain.Services;
 using api_rest.Extensions;
-using api_rest.Resources;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using api_rest.Util;
 
 namespace api_rest.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
+    [Route("/api/[Controller]")]
+    [Authorize()]
+    public class UserController : Controller
     {
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
-
         public UserController(IUserService userService, IMapper mapper)
         {
             _userService = userService;
             _mapper = mapper;
         }
+
         [HttpGet]
         public async Task<IEnumerable<UserResource>> GetAllAsync()
         {
-            var users = await _userService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<User>, IEnumerable<UserResource>>(users);
+            var Users = await _userService.ListAsync();
+            var resources = _mapper.Map<IEnumerable<User>, IEnumerable<UserResource>>(Users);
 
             return resources;
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] SaveUserResource resources) 
+        public async Task<IActionResult> PostAsync([FromBody] SaveUserResource resources)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.GetErrorMessages());
             }
-
-            var users = _mapper.Map<SaveUserResource, User>(resources);
-            var result = await _userService.SaveAsync(users);
+               
+            var Users = _mapper.Map<SaveUserResource, User>(resources);
+            var result = await _userService.SaveAsync(Users);
 
             if (!result.Success)
             {
                 return BadRequest(result.Message);
             }
 
-            var UserResource = _mapper.Map<User, SaveUserResource>(result.User);
-            return Ok(UserResource);
-
+            var userResource = _mapper.Map<User, UserResource>(result.User);
+            return Ok(userResource);
         }
-        
-        [Authorize()]
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SaveUserResource resources)
         {
             if (!ModelState.IsValid)
             {
-                 return BadRequest(ModelState.GetErrorMessages());
+                return BadRequest(ModelState.GetErrorMessages());
             }
 
             var user = _mapper.Map<SaveUserResource, User>(resources);
@@ -68,14 +67,13 @@ namespace api_rest.Controllers
 
             if (!result.Success)
             {
-                return BadRequest(result.Message);
+                return BadRequest(result.Message);               
             }
 
-            var UserResource = _mapper.Map<User, SaveUserResource>(result.User);
-            return Ok(UserResource);
+            var userResource = _mapper.Map<User, UserResource>(result.User);
+            return Ok(userResource);
         }
-
-        [Authorize()]
+    
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {

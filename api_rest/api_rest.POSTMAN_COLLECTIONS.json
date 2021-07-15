@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "cc2b6e16-feaa-4fc1-966e-b913b648e9b3",
+		"name": "api_rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST CATEGORY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjU3MDM1NzEsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.AY0s9OnRshviIk8Nh4imAg_t4mGgZzPvX8MmzMUrpd8",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Name\": \"\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/categories",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Login\": \"LucasMaia\",\r\n    \"Password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjYxMzcxMDcsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.7W_0U1bzt8gNCHEI6NnyRQvQgjcAB_CnPC9zypZM3rk",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "QuantityInPackge",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "UnitOfMeasurement",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "IdCategory",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Category",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Name\": \"Limao\",\r\n        \"UnitOfMeasurement\": 4,\r\n        \"QuantityInPackge\": 1,\r\n        \"IdCategory\": 100\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjYxMzE1NTgsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.PpKgSb0pFsS7K833-qunS0Atg13e_f7Ne_10Ac5J-VE",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Login",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Password",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Adriana\",\r\n    \"Login\": \"AdrianaMaia\",\r\n    \"Password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CATEGORY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjU3MDM0MDYsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.xJdoO1Fr0VTji_dr99_5ExDBPH-cINXlBkdLPaYJYOs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/categories/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjYxMzcxMDcsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.7W_0U1bzt8gNCHEI6NnyRQvQgjcAB_CnPC9zypZM3rk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjYxMzE1NTgsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.PpKgSb0pFsS7K833-qunS0Atg13e_f7Ne_10Ac5J-VE",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CATEGORY",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/categories",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PRODUCT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CATEGORY",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/categories/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRODUCT",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

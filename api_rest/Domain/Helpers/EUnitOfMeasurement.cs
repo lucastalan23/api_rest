@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using api_rest.Domain.Models;
 
 namespace api_rest.Domain.Helpers
 {
     public enum EUnitOfMeasurement : byte
     {
+
         [Description("UN")]
         unity = 1,
 
@@ -21,6 +23,6 @@ namespace api_rest.Domain.Helpers
         Kilogram = 4,
 
         [Description("L")]
-        Liter
+        Liter = 5
     }
 }

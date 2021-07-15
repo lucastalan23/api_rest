@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace api_rest.Migrations
 {
-    public partial class SSuperMercadoBD : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -43,7 +43,7 @@ namespace api_rest.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
                     QuantityInPackage = table.Column<short>(type: "smallint", nullable: false),
-                    UnitOfMeasurement = table.Column<byte>(type: "smallint", nullable: false),
+                    UnitOfMeasurement2 = table.Column<string>(type: "text", nullable: true),
                     CategoryId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
@@ -77,11 +77,11 @@ namespace api_rest.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "CategoryId", "Name", "QuantityInPackage", "UnitOfMeasurement" },
+                columns: new[] { "Id", "CategoryId", "Name", "QuantityInPackage", "UnitOfMeasurement2" },
                 values: new object[,]
                 {
-                    { 200, 100, "Maça", (short)200, (byte)4 },
-                    { 201, 100, "Banana", (short)500, (byte)4 }
+                    { 200, 100, "Maça", (short)200, "Kg" },
+                    { 201, 100, "Banana", (short)500, "Kg" }
                 });
 
             migrationBuilder.CreateIndex(

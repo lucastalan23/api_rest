@@ -28,8 +28,8 @@ namespace api_rest.Controllers
         [HttpGet]
         public async Task<IEnumerable<CategoryResource>> GetAllAsync()
         {
-            var categories = await _categoryService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<CategoryResource>>(categories);
+            var Categories = await _categoryService.ListAsync();
+            var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<CategoryResource>>(Categories);
 
             return resources;
         }
