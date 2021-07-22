@@ -38,6 +38,7 @@ Após a instalação do PostgreSQL, abra o pgAdmin. e importe o arquivo .csv dad
   - [C# XML Documentation](https://marketplace.visualstudio.com/items?itemName=k--kato.docomment)
 
 
+
 ##### Rodando o projeto
 -Abra o PgAdmin 4, no Visual Studio Code, abra o terminal e digite a linha de comando "dotnet ef database update", atualize o seu PgAdmin 4 e logo verá o banco de dados da aplicaçao.
 - Execução pelo terminal do Visual Studio Code: Abra o terminal dentro da IDE, entre na pasta da aplicação api_rest, e por fim, digite o comando "dotnet run". A aplicaçao vai lançar um LocalHost e provavelmente abrirá um navegador(Nao feche-o) que vai continuar em execuçao até ser parada com o atalho "Ctrl+C".
