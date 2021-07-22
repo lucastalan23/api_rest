@@ -1,32 +1,31 @@
-	Passo a passo do que foi implementado na API
+# Passo a passo do que foi implementado na API
 
-1.Implementando a camada de domínio;
+### 1.Implementando a camada de domÃ­nio;
 
-2.Implementando a camada de controle;
+### 2.Implementando a camada de controle;
 
-3.Implementando a camada de serviços;
+### 3.Implementando a camada de serviÃ§os;
 
-4.Implementando os repositórios do domí­nio;
+### 4.Implementando os repositÃ³rios do domÃ­Â­nio;
 
-5.Implementando uma camada de persistência com ORM;
+### 5.Implementando uma camada de persistÃªncia com ORM;
 
-6.Configurando o mecanismo de injeção de dependência;
+### 6.Configurando o mecanismo de injeÃ§Ã£o de dependÃªncia;
 
-7.Criando um Resource para Category; criando uma rota POST para criar novas instâncias Category; validando uma requisição com body usando Model State;
+### 7.Criando um Resource para Category; criando uma rota POST para criar novas instÃ¢ncias Category; validando uma requisiÃ§Ã£o com body usando Model State;
 
-8.Mapeando o SaveCategoryResource; aplicando o Padrão de Projeto Request-Response para registrar novas instâncias de Category; lógica de Banco de Dados e o Padrão de Projeto Unity of Work;
+### 8.Mapeando o SaveCategoryResource; aplicando o PadrÃ£o de Projeto Request-Response para registrar novas instÃ¢ncias de Category; lÃ³gica de Banco de Dados e o PadrÃ£o de Projeto Unity of Work;
 
-9.Testando a rota POST com um software API Client; implementando uma rota PUT para atualização de dados;
+### 9.Testando a rota POST com um software API Client; implementando uma rota PUT para atualizaÃ§Ã£o de dados;
 
-10.Implementando uma rota DELETE para remoção de dados.
+### 10.Implementando uma rota DELETE para remoÃ§Ã£o de dados.
 
-11.Mapear um modelo de domínio para objetos de banco de dados;
-Criar bancos de dados e manter o esquema alinhado com as mudanças no modelo (Migrations);
+### 11.Mapear um modelo de domÃ­nio para objetos de banco de dados;
+Criar bancos de dados e manter o esquema alinhado com as mudanÃ§as no modelo (Migrations);
 
-12.Gerar SQL e executá-lo no banco de dados;
-Gerenciar transações;
+### 12.Gerar SQL e executÃ¡-lo no banco de dados;
+Gerenciar transaÃ§Ãµes;
 
-13.Manter o controle de objetos que já foram recuperados.
+### 13.Manter o controle de objetos que jÃ¡ foram recuperados.
 
 # api_rest
-"# api_rest" 
