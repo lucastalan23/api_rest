@@ -95,4 +95,4 @@ Após a instalação do PostgreSQL, abra o pgAdmin. e importe o arquivo .csv dad
       https://localhost:5001/api/categories/ [ID DA CATEGORIA]
       
     -User
-      https://localhost:5001/api/user/ [ID DO USUARIO]
+      https://localhost:5001/api/user/ [ID DO USUARIO] 
