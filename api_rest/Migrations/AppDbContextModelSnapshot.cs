@@ -20,7 +20,7 @@ namespace api_rest.Migrations
 
             modelBuilder.Entity("api_rest.Domain.Models.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdCategory")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
@@ -30,72 +30,72 @@ namespace api_rest.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("character varying(30)");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdCategory");
 
                     b.ToTable("Categories");
 
                     b.HasData(
                         new
                         {
-                            Id = 100,
+                            IdCategory = 100,
                             Name = "Fruits and Vegetables"
                         },
                         new
                         {
-                            Id = 101,
+                            IdCategory = 101,
                             Name = "Dairy"
                         });
                 });
 
             modelBuilder.Entity("api_rest.Domain.Models.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdProduct")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("IdCategory")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("character varying(30)");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<short>("QuantityInPackage")
                         .HasColumnType("smallint");
 
-                    b.Property<string>("UnitOfMeasurement2")
-                        .HasColumnType("text");
+                    b.Property<byte>("UnitOfMeasurement")
+                        .HasColumnType("smallint");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdProduct");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("IdCategory");
 
                     b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
-                            Id = 200,
-                            CategoryId = 100,
-                            Name = "Maça",
-                            QuantityInPackage = (short)200,
-                            UnitOfMeasurement2 = "Kg"
+                            IdProduct = 100,
+                            IdCategory = 100,
+                            Name = "Apple",
+                            QuantityInPackage = (short)1,
+                            UnitOfMeasurement = (byte)1
                         },
                         new
                         {
-                            Id = 201,
-                            CategoryId = 100,
-                            Name = "Banana",
-                            QuantityInPackage = (short)500,
-                            UnitOfMeasurement2 = "Kg"
+                            IdProduct = 101,
+                            IdCategory = 101,
+                            Name = "Milk",
+                            QuantityInPackage = (short)2,
+                            UnitOfMeasurement = (byte)5
                         });
                 });
 
             modelBuilder.Entity("api_rest.Domain.Models.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdUser")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
@@ -114,21 +114,21 @@ namespace api_rest.Migrations
                         .HasMaxLength(12)
                         .HasColumnType("character varying(12)");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdUser");
 
                     b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            IdUser = 1,
                             Login = "LucasMaia",
                             Name = "Lucas",
                             Password = "12345"
                         },
                         new
                         {
-                            Id = 2,
+                            IdUser = 2,
                             Login = "MateusTales",
                             Name = "Mateus",
                             Password = "98765"
@@ -139,7 +139,7 @@ namespace api_rest.Migrations
                 {
                     b.HasOne("api_rest.Domain.Models.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("IdCategory")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

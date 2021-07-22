@@ -57,7 +57,7 @@ namespace api_rest.Controllers
                     result = new
                     {
                         token,
-                        user = new { user.Id, user.Login}
+                        user = new { user.IdUser, user.Login}
                     }
                 });
             }

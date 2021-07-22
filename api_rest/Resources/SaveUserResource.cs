@@ -19,8 +19,5 @@ namespace api_rest.Resources
         [Required]
         [MaxLength(15)]
         public string Password { get; set; }
-
-        [Required]
-        public int TypeUser { get; set; }
     }
 }

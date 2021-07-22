@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace api_rest.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class MigrationsSuperMercado : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,20 +11,20 @@ namespace api_rest.Migrations
                 name: "Categories",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    IdCategory = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
+                    table.PrimaryKey("PK_Categories", x => x.IdCategory);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    IdUser = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: true),
                     Login = table.Column<string>(type: "character varying(15)", maxLength: 15, nullable: false),
@@ -32,34 +32,34 @@ namespace api_rest.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.IdUser);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    IdProduct = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
+                    Name = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     QuantityInPackage = table.Column<short>(type: "smallint", nullable: false),
-                    UnitOfMeasurement2 = table.Column<string>(type: "text", nullable: true),
-                    CategoryId = table.Column<int>(type: "integer", nullable: false)
+                    UnitOfMeasurement = table.Column<byte>(type: "smallint", nullable: false),
+                    IdCategory = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.IdProduct);
                     table.ForeignKey(
-                        name: "FK_Products_Categories_CategoryId",
-                        column: x => x.CategoryId,
+                        name: "FK_Products_Categories_IdCategory",
+                        column: x => x.IdCategory,
                         principalTable: "Categories",
-                        principalColumn: "Id",
+                        principalColumn: "IdCategory",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "Categories",
-                columns: new[] { "Id", "Name" },
+                columns: new[] { "IdCategory", "Name" },
                 values: new object[,]
                 {
                     { 100, "Fruits and Vegetables" },
@@ -68,7 +68,7 @@ namespace api_rest.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "Login", "Name", "Password" },
+                columns: new[] { "IdUser", "Login", "Name", "Password" },
                 values: new object[,]
                 {
                     { 1, "LucasMaia", "Lucas", "12345" },
@@ -77,17 +77,17 @@ namespace api_rest.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "CategoryId", "Name", "QuantityInPackage", "UnitOfMeasurement2" },
+                columns: new[] { "IdProduct", "IdCategory", "Name", "QuantityInPackage", "UnitOfMeasurement" },
                 values: new object[,]
                 {
-                    { 200, 100, "Maça", (short)200, "Kg" },
-                    { 201, 100, "Banana", (short)500, "Kg" }
+                    { 100, 100, "Apple", (short)1, (byte)1 },
+                    { 101, 101, "Milk", (short)2, (byte)5 }
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_CategoryId",
+                name: "IX_Products_IdCategory",
                 table: "Products",
-                column: "CategoryId");
+                column: "IdCategory");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

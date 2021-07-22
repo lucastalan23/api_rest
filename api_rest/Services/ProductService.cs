@@ -52,7 +52,8 @@ namespace api_rest.Services
             }
 
             existingProduct.Name = product.Name;
-
+            existingProduct.QuantityInPackage = product.QuantityInPackage;
+            existingProduct.UnitOfMeasurement = product.UnitOfMeasurement;
             try
             {
                 _productRepository.Update(existingProduct);

@@ -11,7 +11,7 @@ namespace api_rest.Domain.Helpers
     {
 
         [Description("UN")]
-        unity = 1,
+        Unity = 1,
 
         [Description("MG")]
         Milligram = 2,

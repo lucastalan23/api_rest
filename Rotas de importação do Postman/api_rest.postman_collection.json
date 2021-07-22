@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "cc2b6e16-feaa-4fc1-966e-b913b648e9b3",
+		"name": "api_rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST CATEGORY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5NzYzOTUsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.om52l0KY8-tvYcFbEAQdPvgYJERXJSp79Zp2XdPmDmI",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Name\": \"Brinquedos eróticos\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/categories",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Login\": \"LucasMaia\",\r\n    \"Password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5ODc4MzMsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.QoECPkF9Et-ZbkX-Wrm00xvl0AeDiZFQkS3TGC8C0zY",
+						"type": "text"
+					},
+					{
+						"key": "IdProduct",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "QuantityInPackage",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "UnitOfMeasurement",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "IdCategory",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"romã\",\r\n    \"QuantityInPackage\": 10,\r\n    \"UnitOfMeasurement\": 2,\r\n    \"IdCategory\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5ODk5NjQsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.LFZ0FIcKK1ZgUmThJplFHieWrlyQrHOwmr24vf8-Bkg",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Login",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Password",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Adriana32\",\r\n    \"Login\": \"Adriana233\",\r\n    \"Password\": \"123452\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CATEGORY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5NzYzOTUsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.om52l0KY8-tvYcFbEAQdPvgYJERXJSp79Zp2XdPmDmI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/categories/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5OTMwMzksImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.hkqneK01eNkIjSGSj9kPP_abP18eqRXGutcvSCoUaMc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5ODk5NjQsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.LFZ0FIcKK1ZgUmThJplFHieWrlyQrHOwmr24vf8-Bkg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CATEGORY",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY3MjExMzcsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.qSn-Ev938w3VR64PP2JKdFLUCEGkSQ3Vcq-8P1PwUyM",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Name\": \"Sexshop\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/categories/100",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PRODUCT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5OTMwMzksImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.hkqneK01eNkIjSGSj9kPP_abP18eqRXGutcvSCoUaMc",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "QuantityInPackage",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "UnitOfMeasurement",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "IdCategory",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Category",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idProduct\": 101,\r\n        \"Name\": \"Maça verde 22\",\r\n        \"UnitOfMeasurement\": 1,\r\n        \"QuantityInPackage\": 24\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/product/101",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5ODk5NjQsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.LFZ0FIcKK1ZgUmThJplFHieWrlyQrHOwmr24vf8-Bkg",
+						"type": "text"
+					},
+					{
+						"key": "Id",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Name",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Login",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Password",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Adriana12\",\r\n        \"login\": \"AdrianaMaia0\",\r\n        \"password\": \"123456879\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"4"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5NzYzOTUsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.om52l0KY8-tvYcFbEAQdPvgYJERXJSp79Zp2XdPmDmI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/user/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CATEGORY",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY3MjExMzcsImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.qSn-Ev938w3VR64PP2JKdFLUCEGkSQ3Vcq-8P1PwUyM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/categories/100",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categories",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRODUCT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5OTMwMzksImlzcyI6InRlc3RBcHAuQVBJIiwiYXVkIjoidGVzdEFwcC5BUEkifQ.hkqneK01eNkIjSGSj9kPP_abP18eqRXGutcvSCoUaMc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/product/101",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product",
+						"101"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

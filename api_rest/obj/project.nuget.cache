@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2wa5AGhNUbyEOQS4FbD+lSoXRLm2cw1uwmgyRStG6ux+JcUCx6aattHEUUzVlGbKn9lC6qD6Mo9YoqLhJ6Is1g==",
+  "dgSpecHash": "jHwVkvOSVwzWegn6mU5uFxbO0XQNmiSVVUrlkq8ITUZqEkd3ODwv3kwIAlKBAk9eqap1SZK/2eOezfouDftTBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\api_rest\\api_rest\\api_rest.csproj",
+  "projectFilePath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\dev\\api_rest\\api_rest\\api_rest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\automapper\\8.0.0\\automapper.8.0.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.0.0\\automapper.extensions.microsoft.dependencyinjection.6.0.0.nupkg.sha512",

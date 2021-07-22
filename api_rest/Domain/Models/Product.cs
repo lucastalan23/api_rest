@@ -8,11 +8,11 @@ namespace api_rest.Domain.Models
 {
     public class Product
     {
-        public int Id { get; set; }
+        public int IdProduct { get; set; }
         public String Name { get; set; }
         public short QuantityInPackage { get; set; }
-        public String UnitOfMeasurement2 { get; set; }
-        public int CategoryId { get; set; }
+        public EUnitOfMeasurement UnitOfMeasurement { get; set; }
+        public int IdCategory { get; set; }
         public Category Category { get; set; }
 
     }
