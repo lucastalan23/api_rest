@@ -21,11 +21,13 @@
 ### 10.Implementando uma rota DELETE para remoção de dados.
 
 ### 11.Mapear um modelo de domínio para objetos de banco de dados;
-Criar bancos de dados e manter o esquema alinhado com as mudanças no modelo (Migrations);
 
-### 12.Gerar SQL e executá-lo no banco de dados;
-Gerenciar transações;
+### 12.Criar bancos de dados e manter o esquema alinhado com as mudanças no modelo (Migrations);
 
-### 13.Manter o controle de objetos que já foram recuperados.
+### 13.Gerar SQL e executá-lo no banco de dados;
+
+### 14.Gerenciar transações;
+
+### 15.Manter o controle de objetos que já foram recuperados.
 
 # api_rest
